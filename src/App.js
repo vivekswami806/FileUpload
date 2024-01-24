@@ -8,23 +8,34 @@ import { store } from './redux/store';
 import Counter from './component/Counter';
 import InputFieldConnect from './component/InputFieldConnect';
 import FetchData from './component/FetchData';
+import HOC from './component/HOC';
+import ApiHOC from './component/ApiHOC';
+import Counter2 from './component/Counter2';
+import Debounicing from './component/Debounicing';
 
 
 
 function App() {
   return (
     <>
-    <div className="App">
+    <div className="App" >
       {/* <Fetch/> */}
       {/* <Axios/> */}
     </div>
-    <Provider store={store}>
+    {/* <Provider store={store}>
       <DemoRedux/>
       <Counter/>
       <InputFieldConnect/>
       <FetchData/>
-    </Provider>
+    </Provider> */}
+   {/* <div style={{display:"flex"}}>
+   <HOC comp={<ApiHOC url={"https://dummyjson.com/posts"}/>}/>
+    <HOC comp={<ApiHOC url={"https://dummyjson.com/posts?skip=10&limit=10"}/>}/>
+    <HOC comp={<Counter2/>}/>
     
+   </div> */}
+   <Debounicing/>
+
     </>
     
   );
